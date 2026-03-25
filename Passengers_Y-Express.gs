@@ -1,6 +1,6 @@
 // ================================================================
-// Borispol_Vip_Travel_Passengers.gs — CRM Пасажири (менеджери)
-// Живе в таблиці: Passengers_crm_Oksi
+// Y-Express_Passengers.gs — CRM Пасажири (менеджери)
+// Живе в таблиці: Passengers_Y-Express
 // Deploy: Web App → доступ "Будь-хто"
 // ================================================================
 //
@@ -84,19 +84,19 @@ var DATA_START = 2;
 
 // ── ВСІ ТАБЛИЦІ СИСТЕМИ (SpreadsheetApp.openById) ──
 var DB = {
-  PASSENGERS: '1dCztfyvqFgCEIA6nmtLGFv94QPNDJa5lhCsWpzDVXxY',
-  POSYLKI:    '1kcF3JchG5n7OzB_K2h9hxBqap7xHDnKN5nwMO9Fm2eo',
-  MARHRUT:    '1to9F6K4p46ZUVva0ZG7nCO7ZFbW1ve0SUnathsqhUW0',
-  KLIYENTU:   '1e-V4gK63I3VPlwg_PpYmVOLAYF3YG_s866D5Ys0vVw4',
-  FINANCE:    '1Np3hLCwUIWW9FqWJDZjF_dUQZMIjY16oEH_Z8zEBe_A',
-  CONFIG:     '16j7sX17Ic45dbyyC7qvEG-8VuNtUdCz8d0S03FbABJs',
-  ARCHIVE:    '1Id93R7TJeIP62Gye7fFnu4q3YBZpRr2x652RWphLUiE'
+  PASSENGERS: '1JH_2SKRZ2KJasravE65BNPk8DNLEmFzYqHe-TRzbgl8',
+  POSYLKI:    '1Wi0S--WvFkIimAbDqfCSdXR9AMcEc0TNY_w1OnoGlRU',
+  MARHRUT:    '1k1Y3tAyt5_o6PmcQsadqKHMjpEqo4V__UwMDSrSXlmA',
+  KLIYENTU:   '1WYFQOEx2JDQq-Xv4G3oqmNaU7wgA9ek0Fkw8zWBPPgY',
+  FINANCE:    '1oQ43UjMm9ER7wQT9F0bmtJRqEtLS6OhUgmm0AYYwNSA',
+  CONFIG:     '1PgWYNR4Ty2XUbSRD35ysPo2zq_sRfVB9RyMEmErbTVE',
+  ARCHIVE:    '1uj447DnNWha7EwUUzyh8RVqd_dAGEn1UIfDynvrYGSk'
 };
 
 // Головна таблиця цього скрипта
 var SS_ID = DB.PASSENGERS;
 
-// ── АРКУШІ в Passengers_crm_v4 ──
+// ── АРКУШІ в Passengers_Y-Express ──
 var SHEETS = {
   PAX_UE: 'Україна-ЄВ',
   PAX_EU: 'Європа-УК',
@@ -2255,7 +2255,7 @@ function doGet(e) {
   try {
     switch (action) {
       case 'ping':
-        result = { ok: true, message: 'Borispol Vip Travel CRM v3 API', version: '3.0', timestamp: new Date().toISOString() };
+        result = { ok: true, message: 'Y-Express CRM v3 API', version: '3.0', timestamp: new Date().toISOString() };
         break;
       case 'getAll':
         result = apiGetAll({ sheet: e.parameter.sheet || 'all', filter: {} });
