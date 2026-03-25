@@ -1,7 +1,7 @@
 {
-  "name": "Borispol Vip Travel CRM",
-  "short_name": "BVT CRM",
-  "description": "CRM Пасажири — Borispol Vip Travel",
+  "name": "Y-Express CRM",
+  "short_name": "Y-Express CRM",
+  "description": "CRM Пасажири — Y-Express",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
